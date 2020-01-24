@@ -1,6 +1,6 @@
 #include<iostream>
-#include<string> // this is a string header file for string class in cPP but <sring.h> is of c programming
-//#include<sstring> // this is a stirng stream header file
+#include<string> // this is a string header file for string class in cPP but <string.h> is of c programming
+//#include<sstring> // this is a string stream header file
 // string is a secuence of characters
 // last charcter is always null charcter
 // use string class for the safty of the data
