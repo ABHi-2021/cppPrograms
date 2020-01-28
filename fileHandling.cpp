@@ -35,7 +35,30 @@ ifstream.   */
 
 ofstream fout; // this is the object name of the ofstream that is "fout"
 fout.open("myfile.dat"); // here we have opened the file, since there was no file previously therefore it will be created at the same directory
-fout<< "hello"; // this is the writing part done in the file.
+fout<< "hello Students"; // this is the writing part done in the file.
 fout.close(); // here the file has been closed
+/*=====================================================*/
+
+ifstream fin; // this is the input stream object created
+char ch;
+fin.open("myfile.dat");
+fin>>ch; /* but the thing with ifstream this way is that it doesnt read the spaces and line change and consider it as data seperator
+            therfore, we can use put and get(return character that it has read including spaces and line change) to read the spaces and the line change too. */
+while(!fin.eof()){
+cout << ch;
+fin >> ch; // this does not consider space and line change as delimiter therefore the space is not considered as the
+}
+fin.close();
+cout<< endl;
+
+ifstream finl;
+finl.open("myfile.dat");
+char c;
+c = finl.get();
+while(!finl.eof()){
+cout<<c;
+c = finl.get();
+}
+finl.close();
 return 0;
 }
