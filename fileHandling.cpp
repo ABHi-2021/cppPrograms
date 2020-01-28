@@ -34,7 +34,7 @@ ifstream.   */
  */
 
 ofstream fout; // this is the object name of the ofstream that is "fout"
-fout.open("myfile.dat"); // here we have opened the file, since there was no file previously therefore it will be created at the same directory
+fout.open("myfile.dat", ios::app); // here we have opened the file, since there was no file previously therefore it will be created at the same directory
 fout<< "hello Students"; // this is the writing part done in the file.
 fout.close(); // here the file has been closed
 /*=====================================================*/
@@ -44,7 +44,9 @@ char ch;
 fin.open("myfile.dat");
 fin>>ch; /* but the thing with ifstream this way is that it doesnt read the spaces and line change and consider it as data seperator
             therfore, we can use put and get(return character that it has read including spaces and line change) to read the spaces and the line change too. */
+
 while(!fin.eof()){
+// loop terminates when we have reached the end of the file
 cout << ch;
 fin >> ch; // this does not consider space and line change as delimiter therefore the space is not considered as the
 }
@@ -62,3 +64,6 @@ c = finl.get();
 finl.close();
 return 0;
 }
+/* 1) the file always opens in text mode if not specified
+    2) file is open in open mode if it is not specifid , the file be open as a blank file.
+    3) if file is open in append mode then you are at the last updated char of the file.
