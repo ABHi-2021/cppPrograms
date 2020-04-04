@@ -65,5 +65,5 @@ finl.close();
 return 0;
 }
 /* 1) the file always opens in text mode if not specified
-    2) file is open in open mode if it is not specifid , the file be open as a blank file.
+    2) file is open in open mode if it is not specified , the file be open as a blank file.
     3) if file is open in append mode then you are at the last updated char of the file.
