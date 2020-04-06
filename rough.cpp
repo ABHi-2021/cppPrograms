@@ -1,14 +1,26 @@
-#include<iostream>
-#include<stdio.h>
-
+#include <sstream>
+#include <vector>
+#include <iostream>
 using namespace std;
-int main(){
-// this is the program for the rough work
 
-cout<< "this is the first line of the code"<< endl;
-// found that getch is not used in this compiler therefore the line break or execution of the program is at once
-cout<<"this is the second line of the code"<< endl;
-cout<<"here are the files that we need";
+int main() {
+cout<<"This is the rough c++ program"<<endl;
+string str = "Hello this is Abhishek Tripathi!!!";
+stringstream sso (str);
+vector <string> v;
+string temp;
+while(sso>>temp){
+    v.push_back(temp);
+}
+int l = v.size();
+for(int i = 0; i<l;i++){
+ cout<<v[i]<<endl;
+}
 
-return 0 ;
+int a =44;
+sso<<a;
+string s;
+sso>>s;
+cout<<"This is the string form of the number!!!"<<s<<endl;
+    return 0;
 }

@@ -34,5 +34,20 @@ int input1;
 sso1>>input1; // string stream value is given in the integer variable
 cout<< str1+"2"<< endl;
 cout<< input1+2<< endl;
+
+
+/*
+we can use peek() to see the next element in the input stream
+1) we can use the string stream as the below code
+*/
+
+cout<<"A new way of string stream values"<<endl;
+string sr = "23,4,56";
+stringstream ss(sr); // here we have broke down the string
+char a;
+int b,c,d;
+ss>>b>>a>>c>>a>>d; // here the values are given as same as the stream and are stored in the variables
+cout<<b<<endl<<c<<endl<<d<<endl<<a<<endl;
+
 return 0 ;
 }
