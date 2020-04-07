@@ -78,10 +78,10 @@ std::cout << "====================================" << '\n';
   std::cout << "the last element of the vector v5 is "<<v5.back() << '\n';
   //===========================================================================
 
-  vector <int> v;
+  /* vector <int> v;
   cout<<"This is how we sort the vector in cpp"<<endl;
   int n;
-  cout<<"Enter the number of variables in the array"<<endl;
+  cout<<"Enter the number of variables in the array or vector"<<endl;
   cin>>n;
   for(int i  = 0 ; i < n;i++){
         int nn;
@@ -98,6 +98,17 @@ std::cout << "====================================" << '\n';
   cout<<"The sorting of the vector in descending order"<<endl;
   for(auto i: v){
     cout<<i<<" ";
-  }
+  }*/
+  //============================================================================
+
+  cout<<"Here is about the vector erase!!!"<<endl;
+  // vector erase is used to remove the value from the vector
+  // there can be two types of remove from a vector these are either from a position or from a range for that we use erase function
+  // the erase function is different from clear function as clear function deletes every value in the vector but the erase function don't delete all the value
+  // syntax are v.erase(position); & vector_name.erase(start_pos,end_pos);
+  vector <int> v6{1,2,3,4,5,6,7};
+
+
+
  return 0 ;
 }
