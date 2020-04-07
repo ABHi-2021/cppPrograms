@@ -1,26 +1,60 @@
-#include <sstream>
+#include <cmath>
+#include <cstdio>
 #include <vector>
 #include <iostream>
+#include <algorithm>
+#include <cassert>
 using namespace std;
 
-int main() {
-cout<<"This is the rough c++ program"<<endl;
-string str = "Hello this is Abhishek Tripathi!!!";
-stringstream sso (str);
-vector <string> v;
-string temp;
-while(sso>>temp){
-    v.push_back(temp);
-}
-int l = v.size();
-for(int i = 0; i<l;i++){
- cout<<v[i]<<endl;
-}
+// Write your Student class here
+class Student{
+public:
+    vector <int> scores;
 
-int a =44;
-sso<<a;
-string s;
-sso>>s;
-cout<<"This is the string form of the number!!!"<<s<<endl;
+public:
+    void input(){
+        int count =0;
+    while(count < 5){
+        int val=0;
+        cin>>val;
+        scores.push_back(val);
+        count++;
+    }
+    }
+
+    int calculateTotalScore(){
+    int sum= 0;
+    for(int i  = 0 ; i< scores.size();i++){
+        sum =sum+scores[i];
+    }
+    return sum;
+    }
+
+};
+
+int main() {
+    int n; // number of students
+    cin >> n;
+    Student *s = new Student[n]; // an array of n students
+
+    for(int i = 0; i < n; i++){
+        s[i].input();
+    }
+
+    // calculate Kristen's score
+    int kristen_score = s[0].calculateTotalScore();
+
+    // determine how many students scored higher than Kristen
+    int count = 0;
+    for(int i = 1; i < n; i++){
+        int total = s[i].calculateTotalScore();
+        if(total > kristen_score){
+            count++;
+        }
+    }
+
+    // print result
+    cout << count;
+
     return 0;
 }
