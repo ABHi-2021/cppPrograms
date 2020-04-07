@@ -3,6 +3,8 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include<iterator>
+#include<stdio.h>
 using namespace std;
 
 
@@ -13,17 +15,19 @@ int main() {
     cin>>n;
     for(int i = 0 ; i <n;i++){
         int nn;
-        cin>>n;
+        cin>>nn;
         v.push_back(nn);
     }
-    int start=0,beg,end;
-    cin>>start;
-    cin>>beg>>end;
-    v.erase(start);
-    v.erase(beg,end);
-    cout<<v.size();
-    for(auto i:v){
-        cout<<i<<" ";
+    vector<int> :: iterator i = v.begin();
+    int a;
+    cin>>a;
+    v.erase(v.begin()+a);
+    int b,c;
+    cin>>b>>c;
+    v.erase(v.begin()+b,v.begin()+c);
+    cout<<v.size()<<endl;
+    for(auto g: v){
+        cout<<g<<" ";
     }
     return 0;
 }
