@@ -4,8 +4,11 @@
 #include<stdio.h>
 #include<list> // this is the header file for list
 #include<algorithm> // to use the inbuilt algorithms we need to use the algorithms function
-#include<map>
+#include<map> // this is to include the map functions
 #include<unordered_map> // this is for the unordered map
+#include<stack> // this is to include the stack
+#include<queue> // this is to include the queue
+
 using namespace std;
 
 int main(){
@@ -147,8 +150,90 @@ for(auto itr= mp.begin();itr!=mp.end();itr++){
 
 //======================================================================
 
-//SETS and MULTI SET:
+//SETS and MULTI SET: Associative container
+//sets are used to have unique but we can have same values in a set using the concept of multi set
+//we can erase the value in the set using the erase function and we can insert the value in the set using the insert function
+//here set has only one value and it act as both as key and data values
+set<int> s;
+s.insert(10),s.insert(20),s.insert(30),s.insert(40),s.insert(50),s.insert(40);
+// here if we print the values of the set then there will be unique values and in sorted order
 
+cout<<"values of the normal set are =>"<<endl;
+for(auto i: s)
+    cout<<"set value =>"<<i<<endl;
+
+multiset <int> s1;
+s1.insert(10),s1.insert(20),s1.insert(40),s1.insert(30),s1.insert(40),s1.insert(50);
+// here set with duplicate values are allowed
+s1.erase(30); // this will erase all the occurrence of the value given in the erase function from the set .
+//=======================================================================
+
+//COMPARATORS :
+// They are used to compare and print values accordingly in ascending or descending order
+// we can use less<int> , greater<int>... by default less<int> is used but for the reverse order we use greater<int> with maps and sets.
+// we can also use our own comparators using template key word
+cout<<"Here are the use of comparators"<<endl;
+set <int,greater<int>> s2; // this will print the values in reverse order that is in descending order
+s2.insert(10),s2.insert(20),s2.insert(50),s2.insert(40);
+for(auto &d:s2)
+    cout<<"the value of the set is =>"<<d<<endl;
+
+//======================================================================
+//STACK, QUEUE, PRIORITY QUEUE:
+// we need to include <stack>,<list>,<queue> header files for using STL made containers
+stack<int> cstk;
+cstk.push(100);
+cstk.push(200);
+cstk.push(300);
+cstk.push(400);
+
+cout<<"values of the stack!!!"<<endl;
+while(!cstk.empty){ // we can also use cstk.size() != 0 for pop ups
+    cout<<cstk.top()<<endl; // this is for the top value to print
+    cstk.pop();
+}
+
+//stack by default uses dequeue as to store the data but we can also use vector and linked list
+// for using them we write as stack <int,dequeue<int>> stk; or stack <int,vector<int>>stk; or stack<int,list<int>>stk;
+///////////////////
+
+// QUEUE :
+// here we can have data from two ends those are front and back
+// queue uses dequeue as the default and list can also be used to store the data but we cant use vector as there are no bidirectional
+queue<int>q;
+q.push(100);
+q.push(200);
+q.push(400);
+q.push(300);
+// here we have inserted the data in the queue
+// for printing the values of the queue
+cout<<"values of the queue!!!"<<endl;
+while(!q.empty()){
+    cout<<q.front()<<endl;
+    //cout<<q.back()<<endl; // to get the value from the back of the queue
+    q.pop();
+}
+
+////////////////////
+// PRIORITY QUEUE:
+// here we can see only the top of the element and no front and back
+// here the value come in sorted order
+// here we can pass dequeue and vector as underline data structure to store the data
+// to arrange in the reverse order we have to use " greater<int> "to print in ascending order
+// therefore by default it takes less<int> to sort the element
+priority_queue <int, std::greater<int>> pq; // here the elements will be sorted in ascending order
+pq.push(10);
+pq.push(20);
+pq.push(50);
+pq.push(30);
+cout<<"values of the priority queue!!!"<<endl;
+while(!pq.empty){
+    cout<<pq.top()<endl;
+    pq.pop();
+}
+
+// there are other algorithms like map , filter, and reduce please study from the videos
+// they use algorithms like accumulate, etc to implement the above concepts
 
 return 0;
 }
