@@ -166,6 +166,7 @@ multiset <int> s1;
 s1.insert(10),s1.insert(20),s1.insert(40),s1.insert(30),s1.insert(40),s1.insert(50);
 // here set with duplicate values are allowed
 s1.erase(30); // this will erase all the occurrence of the value given in the erase function from the set .
+// we can use s1.find(value) to find any value in the set if not found then it returns the end value location of the set
 //=======================================================================
 
 //COMPARATORS :
@@ -234,6 +235,7 @@ while(!pq.empty){
 
 // there are other algorithms like map , filter, and reduce please study from the videos
 // they use algorithms like accumulate, etc to implement the above concepts
-
+// use of . is when we have actual object and we want to call the member function or value of the object
+// -> we use this if we have pointer to the actual object ... here actual scene of this is (*a).b where a is the iterator or pointer to the actual object
 return 0;
 }
