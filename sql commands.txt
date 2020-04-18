@@ -1,0 +1,5 @@
+SQL COMMANDS:
+1) UNIQUE : This is used to merge the results of two select clause togther.
+2) LIMIT : This is used to show the number of results equal to LIMIT if there are many number of values returned.
+3) OFFSET : This is used with LIMIT as LIMIT x OFFSET y where it excudes the first y values and then show x values, here offset value cant be negative but can be zero or some +ve value
+	    This should be always be used with ORDER BY clause.
