@@ -83,4 +83,19 @@ Use of symbols :
 1) ^ : Beginning of line anchor
 2) $ : End of line anchor
 3) | : Or ... that is matches either one of the alternatives
-4) 
+4) # : matches any single number in the string
+5) * : matches any zero or any number of characters
+6) . : single character after the pattern
+7) [list]  : list where it can match any single character 
+8) [!list] : here it should not match any of the character in the list
+9) [^list] : here the value should not match with the values in the list
+10) '_r%' : here any character at first place then r at second place then any number of charcters... Finds any values that have "r" in the second position
+11)% : this is used for more than one character of same type goes on in the string
+============================================================================================
+					SUBSTRING
+Substing is used to extract the value or substring from the main string.
+SYNTAX:
+SUBSTR(string_source,start_pos,[length]);
+NOTE:
+*) length (optional): This is the number of characters to extract from string, to create the substring. If it is not specified, the function returns the entire string.
+*) if start_position is negative (less than 0), the function counts the position from the end of the string, and goes backwards, to find the starting character
