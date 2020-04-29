@@ -1,16 +1,29 @@
 THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
 
 *)LISTCOMPREHENSION: we can use this to generate list without writing to many code , just in one line we can get the list
+
 *)SWAPCASE() : This function swaps the case of the string that is being given , it dont take arguments 
+
 *)len() :  to find the length of the string or list or any thing
+
 *) TO FIND THE SECOND LARGEST DIGIT:
 		z= max(lis)
 		if(max(lis)==z):
 			lis.remove(z)
 		z=max(lis) # this is the second largest number after removing the largest and repeting number that was max.
+
 *)join() : this is to join the values with the value given in the string for example;
 		s=s.split()
 		"-".join(s)
 		============ this gives thee value with "-" in between the words.
 
+*) if we want to change the string then we can use slice function or [] things eg:
+		def mutate_string(string, position, character):
+   			 string = string[:position]+character+string[position+1:]
+   			 return string
+
+*)eval(): this is use to evluate an expression and return the value, like we can do validations and solve
+	 maths expression, it automatically understands the data type and return that type
+
+*)any(): it returns TRUE if any item in iterable is true else return false, it also returns false if its empty
 
