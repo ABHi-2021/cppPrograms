@@ -1,0 +1,16 @@
+THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
+
+*)LISTCOMPREHENSION: we can use this to generate list without writing to many code , just in one line we can get the list
+*)SWAPCASE() : This function swaps the case of the string that is being given , it dont take arguments 
+*)len() :  to find the length of the string or list or any thing
+*) TO FIND THE SECOND LARGEST DIGIT:
+		z= max(lis)
+		if(max(lis)==z):
+			lis.remove(z)
+		z=max(lis) # this is the second largest number after removing the largest and repeting number that was max.
+*)join() : this is to join the values with the value given in the string for example;
+		s=s.split()
+		"-".join(s)
+		============ this gives thee value with "-" in between the words.
+
+
