@@ -99,3 +99,14 @@ SUBSTR(string_source,start_pos,[length]);
 NOTE:
 *) length (optional): This is the number of characters to extract from string, to create the substring. If it is not specified, the function returns the entire string.
 *) if start_position is negative (less than 0), the function counts the position from the end of the string, and goes backwards, to find the starting character
+===========================================================================================================================
+
+					OTHER FUNCTIONS		
+REPLACE : we use replace function to replace the values in a data or string... syntax : replace(source,to_replace,what_in_place_of_it,'match_parameters);
+			this can be used to remove all the zeros from a column data like salay as ::: replace (salary,0,''); ----- no zeros in the salary now... wow
+
+CONCAT : we cant use concat to concat more than two strings together but to do this we have to use nested concat function that is the only way not like concat in mysql.
+		SELECT CONCAT(CONCAT('John', ' '), 'Smith') AS fullname FROM dual;
+
+SWITCH case : see online.
+SELECT : this works same as print function in python.
