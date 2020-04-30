@@ -26,4 +26,33 @@ THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
 	 maths expression, it automatically understands the data type and return that type
 
 *)any(): it returns TRUE if any item in iterable is true else return false, it also returns false if its empty
+=======================================================================================
 
+					SETS
+
+*)sets are a collection which are unordered and unidexed. therefore we dont know in which order the set will be printed.
+*)sets with numbers have unique values and are printed in sorted order 
+*)to make a set with values as string for numbers we can use map function as and store as a list
+	lis1=list(map(int,lis))
+*)Here are some of the functions that are related to sets in python 3:
+.)set is created as s= {1,2,4,5} // this is a set of numbers just like in maths
+.)to loop we use ------------( for x in s):
+.)add()... update()--------- to add one item to set we use add() and to add more than one we use update()
+		thisset.update(["oranges","mangoes"])
+		print(thisset)
+.)len(): to get the number of elements in the set
+.)remove() , discard() : to remove an element from the set bu remove returns key error if not found the element whereas discard() does not.
+.)pop() : removes the last element from the set but since we dont know how the set is ordered we cant say that which element will be poped
+.)clear() : this empties the set and returns empty set
+.)del: this keyword will delete the set completly eg: del thisset
+.)JOIN TWO SETS::: we can do this by many ways they are as ::: using union() or using update()
+union(): this joins two set and returns a new set
+update(): this will join the new set to last of the set and updates the set
+.)set(): we can use this to change the list to set, this is called set constructor
+.)symmetric_difference(): returns the symmetric difference of two sets-------- method returns a set that contains all items from both set, but not the items that are present in both sets.
+.)diffrence(): this returns the values that are in set A but not in set B (A-B).
+.)intersection(): returns a set that is intersection of two sets
+.)isdisjoint(): returns if two sets have intersection or not
+.)issubset(): returns if another set contains this set or not
+.)issuperset(): returns if this set conatains another set or not
+.)
