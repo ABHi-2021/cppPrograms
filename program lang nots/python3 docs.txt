@@ -49,7 +49,7 @@ THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
 union(): this joins two set and returns a new set
 update(): this will join the new set to last of the set and updates the set
 .)set(): we can use this to change the list to set, this is called set constructor
-.)symmetric_difference(): returns the symmetric difference of two sets-------- method returns a set that contains all items from both set, but not the items that are present in both sets.
+.)symmetric_difference(): returns the A^B that is except the common elements rest all is returned. This is symmetric difference of two sets.
 .)diffrence(): this returns the values that are in set A but not in set B (A-B).
 .)intersection(): returns a set that is intersection of two sets
 .)isdisjoint(): returns if two sets have intersection or not
