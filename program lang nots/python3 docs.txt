@@ -1,10 +1,12 @@
 THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
+=========================================================
 
 *)LISTCOMPREHENSION: we can use this to generate list without writing to many code , just in one line we can get the list
 
 *)SWAPCASE() : This function swaps the case of the string that is being given , it dont take arguments 
 
 *)len() :  to find the length of the string or list or any thing
+*)count(): this count the frequency of the value in the list.
 
 *) TO FIND THE SECOND LARGEST DIGIT:
 		z= max(lis)
@@ -29,25 +31,30 @@ THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
 =======================================================================================
 
 					SETS
+				===================
 
+*)SETS ARE NOT MUTABLE That is orignal set cant be changed just like strings.
 *)sets are a collection which are unordered and unidexed. therefore we dont know in which order the set will be printed.
 *)sets with numbers have unique values and are printed in sorted order 
 *)to make a set with values as string for numbers we can use map function as and store as a list
-	lis1=list(map(int,lis))
+	****lis1=list(map(int,lis))****
 *)Here are some of the functions that are related to sets in python 3:
 .)set is created as s= {1,2,4,5} // this is a set of numbers just like in maths
 .)to loop we use ------------( for x in s):
 .)add()... update()--------- to add one item to set we use add() and to add more than one we use update()
 		thisset.update(["oranges","mangoes"])
 		print(thisset)
+.)update(): this will join the new set to last of the set and updates the set
 .)len(): to get the number of elements in the set
-.)remove() , discard() : to remove an element from the set bu remove returns key error if not found the element whereas discard() does not.
+.)remove() , discard() : to remove an element from the set but remove returns key error if not found the element whereas discard() does not.
 .)pop() : removes the last element from the set but since we dont know how the set is ordered we cant say that which element will be poped
 .)clear() : this empties the set and returns empty set
 .)del: this keyword will delete the set completly eg: del thisset
+
+===============================Here are math functions related to sets in python===============================
+			===============================================================
 .)JOIN TWO SETS::: we can do this by many ways they are as ::: using union() or using update()
-union(): this joins two set and returns a new set
-update(): this will join the new set to last of the set and updates the set
+.)union(): this joins two set and returns a new set
 .)set(): we can use this to change the list to set, this is called set constructor
 .)symmetric_difference(): returns the A^B that is except the common elements rest all is returned. This is symmetric difference of two sets.
 .)diffrence(): this returns the values that are in set A but not in set B (A-B).
@@ -55,4 +62,20 @@ update(): this will join the new set to last of the set and updates the set
 .)isdisjoint(): returns if two sets have intersection or not
 .)issubset(): returns if another set contains this set or not
 .)issuperset(): returns if this set conatains another set or not
-.)
+=========================Mutation of the set (changes in the orignal set)===================================
+			==================================================
+Operations like update() or |, intersection_update() or &, difference_update() or -=, symmetric_difference_update() or ^=, are few functions
+.)update(): update the elements of the set by adding the elements of another set or iterable to the set.
+.)intersection_update(): update the set by keeping only the elements found in it and the iterable or another set
+.)difference_update(): update the set by removing elements found in the iterable or another set
+.)symmetric_difference_set(): update the set by only keeping the elements found in either set by not in the both
+
+=====================================OPERATORS=====================================
+				    ===========
+1) in: This is used to check if a value exists in a sequence or not. Evaluates to True if found else False.
+2) not in: This Evaluated to True if not found a variable in the specific sequence and false otherwise.
+			Identity Opertators
+1)is: Evaluates True if the variable on either side of the operator point to the same object and false otherwise eg: if(type(x) is int):
+
+2)is not: Evaluate to false if the variable on the either side of the operator point is same othewise true.
+
