@@ -52,7 +52,7 @@ THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
 .)del: this keyword will delete the set completly eg: del thisset
 
 ===============================Here are math functions related to sets in python===============================
-			===============================================================
+			     ====================================================
 .)JOIN TWO SETS::: we can do this by many ways they are as ::: using union() or using update()
 .)union(): this joins two set and returns a new set
 .)set(): we can use this to change the list to set, this is called set constructor
@@ -62,20 +62,52 @@ THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
 .)isdisjoint(): returns if two sets have intersection or not
 .)issubset(): returns if another set contains this set or not
 .)issuperset(): returns if this set conatains another set or not
-=========================Mutation of the set (changes in the orignal set)===================================
-			==================================================
+===============================Mutation of the set (changes in the orignal set)===============================
+			=============================================================
 Operations like update() or |, intersection_update() or &, difference_update() or -=, symmetric_difference_update() or ^=, are few functions
 .)update(): update the elements of the set by adding the elements of another set or iterable to the set.
 .)intersection_update(): update the set by keeping only the elements found in it and the iterable or another set
 .)difference_update(): update the set by removing elements found in the iterable or another set
 .)symmetric_difference_set(): update the set by only keeping the elements found in either set by not in the both
 
-=====================================OPERATORS=====================================
-				    ===========
+===============================OPERATORS===============================
+			      ===========
 1) in: This is used to check if a value exists in a sequence or not. Evaluates to True if found else False.
 2) not in: This Evaluated to True if not found a variable in the specific sequence and false otherwise.
 			Identity Opertators
 1)is: Evaluates True if the variable on either side of the operator point to the same object and false otherwise eg: if(type(x) is int):
 
 2)is not: Evaluate to false if the variable on the either side of the operator point is same othewise true.
+
+===============================MATHS OPERATIONS===============================
+			==============================
+1)divmod(a,b): this returs the tuple that has quotent and the remainder of a/b like(a//b,a%b), // this act as integer division in python 3 and python 2
+2)pow(a,b) or a**b: to return the power of the b times a.
+3)			to be continued
+
+
+===================================ITERTOOLS===================================
+				===============
+we have to import itertools for using it.
+
+1)itertools.product(): .)This tools computes the cartesian product of input iterables.
+		       .)This is equivalent to nested for-loops.
+			.)For example, product(A, B) returns the same as ((x,y) for x in A for y in B). 
+			.) eg: >>> print list(product([1,2,3],repeat = 2))
+					[(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)]
+			.) eg: >>> print list(product([1,2,3],[3,4]))
+					[(1, 3), (1, 4), (2, 3), (2, 4), (3, 3), (3, 4)]
+			>>>
+				>>> A = [[1,2,3],[3,4,5]]
+				>>> print list(product(*A))
+					[(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 3), (3, 4), (3, 5)]
+			>>>
+				>>> B = [[1,2,3],[3,4,5],[7,8]]
+				>>> print list(product(*B))
+					[(1, 3, 7), (1, 3, 8), (1, 4, 7), (1, 4, 8), (1, 5, 7), (1, 5, 8), (2, 3, 7), (2, 3, 8), (2, 4, 7), (2, 4, 8), (2, 5, 7), (2, 5, 8), (3, 3, 7), (3, 3, 8), (3, 4, 7), (3, 4, 8), (3, 5, 7), (3, 5, 8)]
+
+
+
+
+
 
