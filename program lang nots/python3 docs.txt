@@ -110,6 +110,9 @@ we have to import itertools for using it.
 					A=[[1,2]]==== (1,),(2,)
 
 
+2)itertools.permutations():	
+
+
 
 
 
