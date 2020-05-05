@@ -105,6 +105,11 @@ we have to import itertools for using it.
 				>>> B = [[1,2,3],[3,4,5],[7,8]]
 				>>> print list(product(*B))
 					[(1, 3, 7), (1, 3, 8), (1, 4, 7), (1, 4, 8), (1, 5, 7), (1, 5, 8), (2, 3, 7), (2, 3, 8), (2, 4, 7), (2, 4, 8), (2, 5, 7), (2, 5, 8), (3, 3, 7), (3, 3, 8), (3, 4, 7), (3, 4, 8), (3, 5, 7), (3, 5, 8)]
+			the difference between the two exressions is:
+				print(list(itertools.product(*A)) = print(itertools.product(*A))
+					A=[[1,2]]==== (1,),(2,)
+
+
 
 
 
