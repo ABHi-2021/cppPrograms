@@ -28,6 +28,7 @@ THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
 	 maths expression, it automatically understands the data type and return that type
 
 *)any(): it returns TRUE if any item in iterable is true else return false, it also returns false if its empty
+*) sorted() and sort(): the sort function modifies the original list or tuple... sorted() where as returns a sorted list or tuple and does not modifies the original list.
 =======================================================================================
 
 					SETS
@@ -83,7 +84,7 @@ Operations like update() or |, intersection_update() or &, difference_update() o
 			==============================
 1)divmod(a,b): this returs the tuple that has quotent and the remainder of a/b like(a//b,a%b), // this act as integer division in python 3 and python 2
 2)pow(a,b) or a**b: to return the power of the b times a.
-3)			to be continued
+3)==================================to be continued=================================
 
 
 ===================================ITERTOOLS===================================
@@ -110,8 +111,28 @@ we have to import itertools for using it.
 					A=[[1,2]]==== (1,),(2,)
 
 
-2)itertools.permutations():	
+2)itertools.permutations():	SYNTAX: itertools.permutations(iterable,[,r])--------- here iterable is whose permutation is to be found and r is the length for all the permutations.
+				.)If the r value is not given then by default the length of r is taken as the length of the iterable.
+				.)examples:  
+				>>> from itertools import permutations
+				>>> print permutations(['1','2','3'])
+					<itertools.permutations object at 0x02A45210>
+			>>> 
+				>>> print list(permutations(['1','2','3']))
+					[('1', '2', '3'), ('1', '3', '2'), ('2', '1', '3'), ('2', '3', '1'), ('3', '1', '2'), ('3', '2', '1')]
+			>>> 
+				>>> print list(permutations(['1','2','3'],2))
+					[('1', '2'), ('1', '3'), ('2', '1'), ('2', '3'), ('3', '1'), ('3', '2')]
+			>>>
+				>>> print list(permutations('abc',3))
+					[('a', 'b', 'c'), ('a', 'c', 'b'), ('b', 'a', 'c'), ('b', 'c', 'a'), ('c', 'a', 'b'), ('c', 'b', 'a')]
 
+3)itertools.combinations(): same as permutation just the difference is that it is used to generate the combinations.
+				here the elements are seen as unique on the basis of their value and not the position.
+				example: (s="ABC", this will be as : (A,B),(A,C),(B,C)
+
+4)itertools.cobination_with_replacement(): here elements are considered as unique on their place value and the actual value.
+				eg: s="ABC"--- : (A,A),(A,B),(A,C),(B,B),(B,C),(C,C)
 
 
 
