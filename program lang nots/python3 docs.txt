@@ -136,7 +136,32 @@ we have to import itertools for using it.
 				eg: s="ABC"--- : (A,A),(A,B),(A,C),(B,B),(B,C),(C,C)
 	print(*[''.join(i) for i in permutation(sorted(s),int(n))],sep='\n')----------- printing each element in new line
 
-5)itertools.groupby(iterable,[,key]):
+5)itertools.groupby(iterable,[,key]):	1)groups consequtive element of same occurence
+					2)we have to sort the series as if we dont then we will get multiple key for same type of elements
+					3)this is an iterator that means that this points to a value and not return any value but the address
+					4)We have to sort the sequence as if we did this then the first value will be considered as the key value.
+					5)but if we dont sort the series then we will get multiple key for the same value.
+
+=========================================================================================================================================================================
+					COLLECTIONS CLASS
+				==================================
+1)collections.Counter(): this is used to count the frequency of the elements in a string or list or tuple.
+			this returns a dict. with decreasing order of frequency
+			this has three functions that is... items(), values(), keys().
+			items(): returns the tuple with (key and value) where key is the element and value is its freq.
+			values(): returns the frequency list of the elements 
+			keys(): returns what are the elements in the set	
+			program:
+				from collections import Counter
+				n =[1,2,3,5,6,1,2,3,4,5,7,6]
+				print(n)
+				print(Counter(n).items())
+				print(Counter(n).values())
+				print(Counter(n).keys())
+
+2)collections.
+
+
 
 
 
