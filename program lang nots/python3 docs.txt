@@ -7,6 +7,7 @@ THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
 
 *)len() :  to find the length of the string or list or any thing
 *)count(): this count the frequency of the value in the list.
+*)import random------- this class is used to generate random values in python
 
 *) TO FIND THE SECOND LARGEST DIGIT:
 		z= max(lis)
@@ -133,6 +134,9 @@ we have to import itertools for using it.
 
 4)itertools.cobination_with_replacement(): here elements are considered as unique on their place value and the actual value.
 				eg: s="ABC"--- : (A,A),(A,B),(A,C),(B,B),(B,C),(C,C)
+	print(*[''.join(i) for i in permutation(sorted(s),int(n))],sep='\n')----------- printing each element in new line
+
+5)itertools.groupby(iterable,[,key]):
 
 
 
