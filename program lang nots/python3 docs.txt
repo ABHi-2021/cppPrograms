@@ -158,9 +158,43 @@ we have to import itertools for using it.
 				print(Counter(n).items())
 				print(Counter(n).values())
 				print(Counter(n).keys())
+====================================
+NOTE:
+s= collections.Counter(map(int,input().split()))-------- here if we are want to acces the values we can as 
+	if size in s and s[size]>0:------- here we checked the value is present and if its freq is greater than 0 or not.
+====================================
 
-2)collections.
 
+2)collections.defaultdict():	it gives the default value to the elements that are not having any key in the dict.
+				read for more info.
+
+3)collections.namedtuple():	1)They are as the dictionary data types. They are present in collections module. In this we can access the values using the index number/name and also the key value unlike dictionary.
+				2)Here we can use various functions to retrive and input the data.
+					example:1) Access by the index : 
+
+import collections
+Student = collections.namedtuple('Student',['NAME','age','dob'])
+#adding values
+s = Student('abhi','23','12211996')
+#Access with index
+print(s[1]) #prints the age
+#Access with the use of attribute/name
+print(s.name) #prints the name that is 'abhi'
+#Access the value with use of getattr() function
+print(getattr(s,'name')) # prints the name present in s that is 'abhi'
+li = ['aman','19','02052002']
+#use of _make()
+print(s._make(li)) # prints the value of the namedtuple as Student type... 
+
+
+			conversion operations on namedtuple and additons operations
+			===========================================================
+1)_make(): this helps to enter the values as we want to be in the namedtuple. 
+		from collections import namedtuple
+		n,s =int(input()),input().split() # this is for the input of attributes of the GRADE, the number of input of the GRADE
+		Grade = namedtuple('Grade',s) # here we have created a GRADE namedtuple type 
+		marks = [int(Grade._make(input().split()).MARKS) for _ in range(n)] # this is list of marks from the each GRADE entered ... here we have used _make therefore 
+		print(sum(marks)/len(marks)) # this is for the avg of the marks
 
 
 
