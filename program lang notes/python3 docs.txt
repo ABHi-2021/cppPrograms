@@ -206,6 +206,7 @@ print(s._make(li)) # prints the value of the namedtuple as Student type...
 3)_replace(): thisi is used to replace the value mapped with the passed key-name.
 ============================================================================================================================================================
 
+NOTE): --- There are three types of dict: chainmap , orderedict, defaultdict... these are some of the dict that are used to enhance the use of dictionaries in python 3.
 
 4) collections.OrderdDict():	
 
