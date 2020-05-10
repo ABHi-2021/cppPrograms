@@ -28,8 +28,9 @@ THIS IS FILE ON PYTHON 3 TRICKS AND FUNCTIONS SHORTCUTS:
 *)eval(): this is use to evluate an expression and return the value, like we can do validations and solve
 	 maths expression, it automatically understands the data type and return that type
 
-*)any(): it returns TRUE if any item in iterable is true else return false, it also returns false if its empty
-*) sorted() and sort(): the sort function modifies the original list or tuple... sorted() where as returns a sorted list or tuple and does not modifies the original list.
+*)any(): 	it returns TRUE if any item in iterable is true else return false, it also returns false if its empty
+*)sorted() and sort():	 the sort function modifies the original list or tuple... sorted() where as returns a sorted list or tuple and does not modifies the original list.
+*)rpartiton():	 this finds the last occurance of the string and returns three valued tuple where first has before the occurance, then the occurance, then after the occurance.
 =======================================================================================
 
 					SETS
@@ -208,7 +209,29 @@ print(s._make(li)) # prints the value of the namedtuple as Student type...
 
 NOTE): --- There are three types of dict: chainmap , orderedict, defaultdict... these are some of the dict that are used to enhance the use of dictionaries in python 3.
 
-4) collections.OrderdDict():	
+4) collections.OrderdDict():	this is like a dictionary but when we print the dictionary this prints in the same order as we have entered the value in the dictionary.
+
+5)collections.deque(): this is kind of queue where the addition and removal of the element is from both the end that is front and rear.
+			this is faster than list as it takes O(1) time only for these operations.
+			here are some of the functions related to this :
+			1) append: append the element at the right of the queue.
+			2) appendleft(): append the element at the left of the queue.
+			3) pop(): pop element from the right.
+			4)popleft(): removes element from the left
+			5)remove(): removes the first occurance of the element.
+			6)rotate():rotates the deque by the number specified in the argument. if its -ve then left else from right.
+			7)index(element,beg,end): it search the element from the beg index till end index and returns the index of the element if found.
+			8)insert(i,a): it inserts the value at the index i.
+			9)count():counts the freq. of the value in the argument.
+			10)reverse(): this is used to reverse the order of the deque
+... rest can be taken from the geeks for geekd source.
+
+=============================================================================================================================================================================
+
+					EXCEPTIONS AND HANDLING
+					=======================
+
+
 
 
 
