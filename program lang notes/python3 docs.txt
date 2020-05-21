@@ -92,6 +92,9 @@ Operations like update() or |, intersection_update() or &, difference_update() o
 ===================================ITERTOOLS===================================
 				===============
 we have to import itertools for using it.
+This is used to iterate over iterators like list or strings.
+They help in traversal of iterators easy.
+
 
 1)itertools.product(): .)This tools computes the cartesian product of input iterables.
 		       .)This is equivalent to nested for-loops.
@@ -142,6 +145,16 @@ we have to import itertools for using it.
 					3)this is an iterator that means that this points to a value and not return any value but the address
 					4)We have to sort the sequence as if we did this then the first value will be considered as the key value.
 					5)but if we dont sort the series then we will get multiple key for the same value.
+                    
+6) itertools.starmap(): this is used as map function only but the difference is given below
+                        lis= [(2,3),(2,4)]
+                        print(list(map(pow,lis)) --------- # This gives error as here tuple inside list is considered as one but if we      use starmap the problem is soleved.
+                        print(list(starmap(pow,lis)))-------- here we get the power raise as (a,b) for each tuple.
+                        
+                        def startmap(function, iterable):
+  
+                           for it in iterables:
+                           yeild function(*it)------------ # how the starmap works.
 
 =========================================================================================================================================================================
 					COLLECTIONS MODULE
@@ -228,8 +241,10 @@ NOTE): --- There are three types of dict: chainmap , orderedict, defaultdict... 
 
 =============================================================================================================================================================================
 
-					EXCEPTIONS AND HANDLING
-					=======================
+                DATES and TIME
+             ===================
+             
+             
 
 
 
