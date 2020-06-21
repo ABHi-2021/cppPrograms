@@ -24,7 +24,7 @@ int main() {
   std::vector<int> v3(5,0); // here there are 5 blocks as the initial capacity with 0 in it .
  // to print the value of the vector we can use the same as in array for eg: v3[1]; here []is used to access it.
 for(int i : v3) // this is for each form of for loop
- cout << v3[1]<< endl; // printing all the value of the vector in new line as 0.
+ cout << v3[i]<< endl; // printing all the value of the vector in new line as 0.
 
  std::vector<string>v4(3,"hello"); // this is a vector with string values to store
  for(int j =0; j < 3 ; j++){
